@@ -85,11 +85,11 @@ const IntroductionForm = ({setActiveTab}) => {
                   }`}
                   type="text"
                   id='lastName'
-                  placeholder="Enter first name"
+                  placeholder="Enter Last name"
                   invalid={!!errors.lastName}
                   {...field}
                 />
-                {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>}
+                {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName.message}</p>}
               </div>
             )}
           />
@@ -109,11 +109,11 @@ const IntroductionForm = ({setActiveTab}) => {
                   }`}
                   type="text"
                   id='email'
-                  placeholder="Enter first name"
+                  placeholder="Enter your email"
                   invalid={!!errors.email}
                   {...field}
                 />
-                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>}
+                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
               </div>
             )}
           />
@@ -133,11 +133,11 @@ const IntroductionForm = ({setActiveTab}) => {
                   }`}
                   type="text"
                   id='contactNo'
-                  placeholder="Enter first name"
+                  placeholder="Enter your contact number"
                   invalid={!!errors.contactNo}
                   {...field}
                 />
-                {errors.contactNo && <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>}
+                {errors.contactNo && <p className="text-red-500 text-sm mt-1">{errors.contactNo.message}</p>}
               </div>
             )}
           />

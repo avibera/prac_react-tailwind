@@ -199,7 +199,7 @@ const IntroductionForm = ({setActiveTab}) => {
                   }`}
                   type="text"
                   id="about"
-                  placeholder="Enter first name"
+                  placeholder="Describe yourself"
                   invalid={!!errors.about}
                   {...field}
                 />
