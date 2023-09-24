@@ -1,14 +1,19 @@
 import React from "react";
+import { postDetails } from './store/store'
 import { useDispatch, useSelector } from "react-redux";
-import {postDetails} from './store/store'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const PreviewCard = () => {
     const dispatch = useDispatch();
     const data = useSelector((state) => state.formData);
 
-    const handleClick = () => { 
-        console.log('AYA')
+    const handleClick = () => {
         dispatch(postDetails(data))
+        toast.success('Form submitted successfully!', {
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 2000,
+        });
     };
     return (
         <div className="max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-gradient-to-r from-blue-500 to-slate-500">

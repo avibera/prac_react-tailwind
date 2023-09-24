@@ -18,14 +18,14 @@ const IntroductionForm = ({setActiveTab}) => {
 
   const options = ["Reading Books", "Watching Movies", "Others"];
   const cityOptions = [
-    { value: "city1", label: "City 1" },
-    { value: "city2", label: "City 2" },
-    { value: "city3", label: "City 3" },
+    { value: "city1", label: "Bangalore" },
+    { value: "city2", label: "Pune" },
+    { value: "city3", label: "Jamshedpur" },
   ];
   const defaultValues = {
     gender: "",
     interests: [],
-    location: { },
+    location: {},
     about: "",
   };
 
@@ -36,7 +36,7 @@ const IntroductionForm = ({setActiveTab}) => {
       .required("Select at least 2 interests"),
     location: Yup.object().shape({
       value: Yup.string().required(),
-      label: Yup.string().required(),
+      label: Yup.string().required(),    
     }),
     about: Yup.string()
       .max(100, "About should not exceed 100 characters")
