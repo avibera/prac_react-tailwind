@@ -9,7 +9,9 @@ const PreviewCard = () => {
     const data = useSelector((state) => state.formData);
 
     const handleClick = () => {
-        dispatch(postDetails(data))
+        dispatch(postDetails(data.introductionData))
+
+        // Custom toast for dispalying success message
         toast.success('Form submitted successfully!', {
             position: toast.POSITION.TOP_RIGHT,
             autoClose: 2000,
@@ -17,7 +19,6 @@ const PreviewCard = () => {
     };
     return (
         <div className="max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-gradient-to-r from-blue-500 to-slate-500">
-            {/* <img src={imageUrl} alt={title} className="w-full" /> */}
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">
                     <span className="text-lg text-gray-700 font-semibold">
