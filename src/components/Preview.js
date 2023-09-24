@@ -9,7 +9,7 @@ const PreviewCard = () => {
     const data = useSelector((state) => state.formData);
 
     const handleClick = () => {
-        dispatch(postDetails(data.introductionData))
+        dispatch(postDetails(data))
 
         // Custom toast for dispalying success message
         toast.success('Form submitted successfully!', {
